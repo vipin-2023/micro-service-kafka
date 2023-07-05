@@ -1,5 +1,5 @@
 
-import app from '.';
+import app from '../src/index';
 import { connectToMongoDB } from './config/mongodb';
 
 import { consumeOrderEvents } from './controllers/inventoryController';

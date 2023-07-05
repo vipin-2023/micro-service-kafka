@@ -1,6 +1,5 @@
-// order-service/src/server.ts
 
-import app from '.';
+import app from "../src/index";
 import { connectToMongoDB } from './config/mongodb';
 
 

@@ -1,4 +1,3 @@
-// inventory-service/src/config/kafkaConfig.ts
 import { Kafka, KafkaConfig } from 'kafkajs';
 
 export const kafkaConfig: KafkaConfig = {

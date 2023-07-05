@@ -1,4 +1,4 @@
-// order-service/src/config/kafkaConfig.ts
+
 import { Kafka, KafkaConfig } from 'kafkajs';
 
 const kafkaConfig: KafkaConfig = {

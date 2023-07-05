@@ -1,8 +1,8 @@
-// inventory-service/src/controllers/inventoryController.ts
 import { Message } from 'kafkajs';
-
+import { Request, Response } from 'express';
 import { InventoryItemModel } from '../models/inventoryModel';
 import { kafkaConsumer } from '../config/kafka';
+
 
 const processOrderEvent = async (message: Message) => {
   try {
@@ -32,3 +32,13 @@ export const consumeOrderEvents = async () => {
     },
   });
 };
+
+export const getInventory= async (req:Request, res:Response):Promise<void> => {
+  try {
+    const inventory = await InventoryItemModel.find();
+    res.status(200).json({ inventory });
+  } catch (error) {
+    console.error('Failed to get inventory:', error);
+    res.status(500).json({ error: 'Failed to get inventory' });
+  }
+}

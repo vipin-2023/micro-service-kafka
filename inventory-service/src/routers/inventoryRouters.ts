@@ -1,13 +1,8 @@
-// inventory-service/src/routes/inventoryRoutes.ts
 import express from 'express';
-import { consumeOrderEvents } from '../controllers/inventoryController';
+import { getInventory } from '../controllers/inventoryController';
 
 const router = express.Router();
 
-router.get('/inventory', (req, res) => {
-  // Get inventory details
-  // Your implementation here
-  res.json({ message: 'Inventory details' });
-});
+router.get('/inventory',getInventory);
 
 export default router;

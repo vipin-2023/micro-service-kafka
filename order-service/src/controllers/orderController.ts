@@ -9,6 +9,7 @@ export const createOrder = async (req: Request, res: Response) => {
     const { orderId, items } = req.body;
 
     // Publish order event to Kafka
+    await kafkaProducer.connect();
     await kafkaProducer.send({
       topic: 'orders',
       messages: [{ value: JSON.stringify({ orderId, items }) }],
