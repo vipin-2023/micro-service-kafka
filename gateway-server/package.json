@@ -1,5 +1,5 @@
 {
-  "name": "order-service",
+  "name": "gateway-server",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
@@ -12,14 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "kafkajs": "^2.2.4",
-    "mongoose": "^7.3.1"
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/express": "^4.17.17",
-    "@types/mongoose": "^5.11.97",
-    "@types/node": "^20.3.3",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
